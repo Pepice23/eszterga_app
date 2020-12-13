@@ -6,11 +6,13 @@ class InputBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 10),
       child: TextField(
           decoration: InputDecoration(
-              labelText: "Szám:",
-              hintText: "1-100",
-              border: OutlineInputBorder()),
+            labelText: "Szám:",
+            hintText: "1-100",
+            border: OutlineInputBorder(),
+          ),
           keyboardType: TextInputType.number,
           onChanged: (text) {
             int number = makeNumber(text);

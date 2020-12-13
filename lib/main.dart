@@ -4,7 +4,6 @@ import 'package:eszterga_app/result.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:eszterga_app/state.dart';
-import 'package:eszterga_app/layout.dart';
 
 void main() {
   runApp(App());
@@ -20,32 +19,27 @@ class App extends StatelessWidget {
           appBar: AppBar(
             title: Text("Povi Eszterga Számológépe"),
           ),
-          body: Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                Row(
+          body: Column(
+            children: [
+              InputBar(),
+              Expanded(
+                child: Row(
                   children: [
                     Expanded(
-                      child: InputBar(),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
+                      flex: 2,
                       child: LowerNeighbourNumbers(),
                     ),
                     Expanded(
                       child: Result(),
                     ),
                     Expanded(
+                      flex: 2,
                       child: HigherNeighbourNumbers(),
-                    )
+                    ),
                   ],
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           ),
         ),
       ),

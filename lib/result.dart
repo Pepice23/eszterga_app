@@ -9,11 +9,9 @@ class Result extends StatelessWidget {
       children: [
         Text(
           "30000/3.14/${Provider.of<Data>(context).number} = ",
-          style: TextStyle(fontSize: 30.0),
         ),
         Text(
           Provider.of<Data>(context).processedNumber.toStringAsFixed(2),
-          style: TextStyle(fontSize: 30.0),
         )
       ],
     );

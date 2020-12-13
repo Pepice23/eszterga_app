@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'package:eszterga_app/state.dart';
 
 class LowerNeighbourNumbers extends StatelessWidget {
